@@ -1,0 +1,138 @@
+.menu{
+  width: 100%;
+  height: 80px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
+  .bm-burger-button {
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    left: 26px;
+    top: 24px;
+  }
+}
+.bm-burger-bars {
+  background: #373a47;
+}
+.bm-burger-bars-hover {
+  background: orangered;
+}
+
+.bm-menu-wrap{
+  width: 100% !important;
+}
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  position: absolute;
+  top: 16px !important;
+  right: 16px !important;
+  transform: scale(1.8);
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+  transition: background-color  0.5s;
+  &:hover{
+    background: orangered !important ;
+  }
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+Sidebar wrapper styles
+Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+*/
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: #15191b;
+  font-size: 3rem;
+  text-align: center ;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  a {
+    color: #b8b7ad;
+    //padding: 1.5rem;
+    font-weight:700 ;
+    transition: 0.5s;
+    outline: none !important;
+    border: none !important ;
+    position: relative;
+    margin: 5px;
+    padding:10px;
+    &:before{
+      content: " ";
+      //margin-left: -24px;
+      position: absolute;
+      width: 0;
+      height: 70px;
+      background: #ff412f;
+      //transition: 0.5s;
+      text-align:center ;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+    }
+    &:hover{
+      color: #ff412f;
+      text-decoration: none;
+      box-shadow: 0px 0px 50px #ff412f;
+      &:before{
+        transition: 1s;
+        width: 90%;
+        color:#fff ;
+        mix-blend-mode: difference;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  outline: none;
+  border: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  filter: blur(5px);
+}
+.fa-sign-in {
+  color: gray;
+  transition: 0.9s;
+  &:hover{
+    color: #6cea14;
+    transform: scale(1.4);
+  }
+}
+.fa-user-plus{
+  color: gray;
+  transition: 0.9s;
+  &:hover{
+    color: #ff412f;
+    transform: scale(1.4);
+  }
+}
